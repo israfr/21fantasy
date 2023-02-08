@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRA</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/captain-icons/dist/captain-icons.css">
+</head>
+<body>
+    <section id="home">
+        <div class="home-content">
+            <nav class="my-nav">
+                <button class="toggle">
+                    <i class='cap-icon ci-align-justify'></i>
+                </button>
+
+                <div class="nav-brand">
+                    <a href="">ISRA</a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul>
+                        <li>
+                            <a href="">Email</a>
+                        </li>
+                        <li>
+                            <a href="">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content-container">
+                <div class="content-text">
+                    <h1>A <span>FANTASY</span></h1>
+                    <h1>THAT</h1>
+                    <h1>I <span>CREATED</span></h1>
+                </div>
+            </div>
+
+            <div class="arrow-container">
+                <a href="#content">
+                    <i class='cap-icon ci-arrow-down'></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="parallax-background">
+            <img src="img/1-background.png" alt="" id="background_1">
+            <img src="img/2-star.png" alt="" id="star_2">
+            <img src="img/3-star.png" alt="" id="star_3">
+            <img src="img/5-planet.png" alt="" id="planet_5">
+            <img src="img/4-planet.png" alt="" id="planet_4">
+            <img src="img/9-ground.png" alt="" id="ground_9">
+            <img src="img/6-rock.png" alt="" id="rock_6">
+            <img src="img/8-rock.png" alt="" id="rock_8">
+            <img src="img/7-rock.png" alt="" id="rock_7">
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="content-text">
+            <h2>Fantasy is being created</h2>
+            <h2><i class='cap-icon ci-heart'></i></h2>
+        </div>
+    </section>
+
+    <script>
+        let star_2 = document.getElementById('star_2');
+        let star_3 = document.getElementById('star_3');
+        let planet_4 = document.getElementById('planet_4');
+        let planet_5 = document.getElementById('planet_5');
+        let rock_7 = document.getElementById('rock_7');
+        let rock_8 = document.getElementById('rock_8');
+
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            star_2.style.left = value * -0.50 + 'px';
+            star_3.style.left = value * 0.50 + 'px';
+            planet_4.style.left = value * 1 + 'px';
+            planet_5.style.left = value * -1 + 'px';
+            rock_7.style.top = value * 1 + 'px';
+            rock_8.style.top = value * 1.50 + 'px';
+        })
+    </script>
+
+    <script>
+        var toggle = document.querySelector('.toggle');
+        var nav = document.querySelector('.my-nav');
+
+        var openSocial = () => {
+            nav.classList.toggle('active');
+        };
+        toggle.addEventListener('click', openSocial);
+    </script>
+</body>
+</html>
